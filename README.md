@@ -22,6 +22,6 @@
 ### Timed out waiting for transform from base_link to map to become available before running costmap, tf error: canTransform: target_frame map does not exist.. canTransform returned after 354.222 timeout was 0.1.
 
 1. This occurs when there is no tf between map to odom. 
-2. It was solved by 2 methods - first, the order of launching wheel `odometry -> visual -> navigation stack` should be correct. Second, make sure that the parameter `obstacles/laser/topic` to `/scan` in file `costmap_local.yaml` and `costmap_global_static.yaml` . Otherwise the laserscan won't be received the obstacles layer in local costmap.
+2. It was solved by 2 methods - first, the order of launching `wheel odometry -> visual -> navigation stack` should be correct. Second, make sure that the parameter `obstacles/laser/topic` to `/scan` in file `costmap_local.yaml` and `costmap_global_static.yaml` . Otherwise the laserscan won't be received the obstacles layer in local costmap.
 
 > Status : Solved
